@@ -1,6 +1,6 @@
-class NomeClasse {
+class produtosPage {
 
-    nomeMetodo(parametros ){
+    inserirProduto(parametros ){
         //ações do método
     }
 
