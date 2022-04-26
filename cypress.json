@@ -1,4 +1,5 @@
 {
   "baseUrl": "http://lojaebac.ebaconline.art.br/",
-  "projectId": "416d8f"
+  "projectId": "416d8f",
+  "reporter": "mochawesome"
 }

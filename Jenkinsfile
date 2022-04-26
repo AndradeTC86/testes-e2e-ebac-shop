@@ -1,12 +1,7 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Clonar o repositorio') {
-            steps {
-               git branch: 'main', url: 'https://github.com/AndradeTC86/testes-e2e-ebac-shop.git'
-            }
-        }
+    stages {       
         stage('Instalar dependencias') {
             steps {
                powershell 'npm install'
@@ -15,6 +10,11 @@ pipeline {
         stage('Executar Testes') {
             steps {
               powershell 'npm run cy:run' 
+            }
+        }    
+        stage('Gerar Relatório') {
+            steps {
+              publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'mochawesome-report', reportFiles: 'mochawesome.html', reportName: 'EBAC Shop Report', reportTitles: '']) 
             }
         }
     }
