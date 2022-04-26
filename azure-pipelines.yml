@@ -1,0 +1,21 @@
+trigger:
+- azure
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: NodeTool@0
+  displayName: "Preparando o ambiente"
+  inputs:
+    versionSpec: '12.x'
+    checkLatest: true
+- script: "npm install"
+  displayName: "Instalando as dependências"
+- script: "npm run cy:run-junit" 
+  displayName: "Executando os testes"
+- task: PublishTestResults@2
+  displayName: "GeraRelatório"
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/TEST-*.xml'
