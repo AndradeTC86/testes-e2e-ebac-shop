@@ -1,54 +1,62 @@
-# Testes End to End - Ebac Shop
-### Exercício para os alunos de Qualidade de software da EBAC 
+# Testes E2E Ebac Shop
 
-Ebac shop: http://lojaebac.ebaconline.art.br/
+# Automation E2E Cypress Test
 
-## Clonando e executando em sua máquina
+This is the repository for automation of web projects, developed to work with Cypress.
 
-### Pré-requisito:
+## Table of Contents
 
--Node.js - Você encontra em: https://nodejs.org/en/
+1. [Goal](#goal)
+2. [Project Structure](#project-structure)
+3. [Tests](#tests)
+4. [Data](#data)
+5. [Initial Setup](#initial-setup)
+6. [Run Tests](#run-tests)
 
--Visual Studio Code ou qualquer editor de texto - você encontra em: https://code.visualstudio.com/download
+## Goal
 
--Git: você encontra em: https://git-scm.com/downloads
+The goal of this repository is to be easy to understand focused on developing automated tests for Web, using [Cypress](https://www.cypress.io/), a tool developed in JavaScript language that provides speed, ease and reliability in the tests.
 
+The architecture developed for this project meets the need to centralize only a single BDD (Behavior Driven Development).
 
-Via terminal, rode os seguintes comandos:
-```  
-git clone https://github.com/EBAC-QE/testes-e2e-ebac-shop.git
+This project can be executed in Chrome, Firefox and Edge browsers.
+
+## Project Structure
+
 ```
+|--- cypress
+|----- downloads
+|----- fixtures
+|----- integration
+|----- plugins
+|----- support
+|--- cypress.json
+|--- Jenkinsfile
+|--- package-lock.json
+|--- package.json
+|--- test-results.xml
 ```
-cd testes-e2e-ebac-shop
-```
 
-#### Para instalar as dependencias:
-```
-npm install 
-```
+## Tests
 
-#### Para executar em moodo Headlesss via console:
-```
-npx cypress run
-```
+The tests were written using the JavaScript language with Cypress.
 
-#### Para executar via Dashboard:
-```
-npx cypress open 
-```
-Após abrir o dasboard, clique na opção "Running integration tests" para rodar todos os testes.
+## Data
 
+All data used in the execution of the automated tests will be in a .json file, located inside the "fixtures".
 
-### Bibliotecas de apoio:
--Cypress: Framework de automação: https://cypress.io/
+## Run tests
 
--Faker: Biblioteca para geração de massa de dados: https://www.npmjs.com/package/faker
+### Initial Setup
 
+1. Requires node. To install, execute `npm install node` or download [Node](https://nodejs.org/en/download/)
+2. Run the command `npm install` to install dependencies
 
-### Bom exercício ;) 
-Fábio & José Ernesto
-Qualidade de software
+### Run Tests
 
-
-
-
+- Run one of the commands below to run the tests.
+  Examples:
+- To run all tests, execute `npm run test`
+- To run tests opening the Cypress interface, execute  `npm run cy:open`
+- To run tests without opening the Cypress interface, execute  `npm run cy:run`
+<p>

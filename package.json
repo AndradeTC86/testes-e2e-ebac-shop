@@ -4,11 +4,9 @@
   "description": "Ebac shop: http://lojaebac.ebaconline.art.br/",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run cy:run",
     "cy:open": "npx cypress open",
-    "cy:run": "npx cypress run",
-    "cy:dashboard": "",
-    "cy:report": ""
+    "cy:run": "npx cypress run"
   },
   "repository": {
     "type": "git",
