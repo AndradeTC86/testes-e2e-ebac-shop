@@ -10,14 +10,7 @@ const dadosProdutos = require("../fixtures/produtos.json");
 const dadosEndereco = require("../fixtures/endereco.json");
 
 context("Exercicio - Testes End-to-end - Fluxo de pedido", () => {
-  /*  Como cliente 
-        Quero acessar a Loja EBAC 
-        Para fazer um pedido de 4 produtos 
-        Fazendo a escolha dos produtos
-        Adicionando ao carrinho
-        Preenchendo todas opções no checkout
-        E validando minha compra ao final */
-
+  
   beforeEach(() => {
     cy.visit("/");
   });
@@ -73,13 +66,5 @@ context("Exercicio - Testes End-to-end - Fluxo de pedido", () => {
       "contain",
       "Obrigado. Seu pedido foi recebido."
     );
-    //cy.get(':nth-child(1) > .woocommerce-table__product-name > a').should('contain', dadosProdutos[0].produto)
-    //cy.get(':nth-child(1) > .woocommerce-table__product-name > .product-quantity').should('contain', dadosProdutos[0].quantidade)
-    //cy.get(':nth-child(2) > .woocommerce-table__product-name > a').should('contain', dadosProdutos[1].produto)
-    //cy.get(':nth-child(2) > .woocommerce-table__product-name > .product-quantity').should('contain', dadosProdutos[1].quantidade)
-    //cy.get(':nth-child(3) > .woocommerce-table__product-name > a').should('contain', dadosProdutos[2].produto)
-    //cy.get(':nth-child(3) > .woocommerce-table__product-name > .product-quantity').should('contain', dadosProdutos[2].quantidade)
-    //cy.get(':nth-child(4) > .woocommerce-table__product-name > a').should('contain', dadosProdutos[3].produto)
-    //cy.get(':nth-child(4) > .woocommerce-table__product-name > .product-quantity').should('contain', dadosProdutos[3].quantidade)
   });
 });
